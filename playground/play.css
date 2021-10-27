@@ -1,0 +1,118 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  .calculator {
+    border: 1px solid rgb(22, 21, 21);
+    background-color: black;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+  }
+  
+  .calculator-screen {
+    width: 100%;
+    font-size: 5rem;
+    height: 80px;
+    border: none;
+    background-color:black;
+    color: #fff;
+    text-align: right;
+    padding-right: 20px;
+    padding-left: 10px;
+  }
+  .second-operand-screen {
+    width: 100%;
+    font-size: 3rem;
+    height: 80px;
+    border: none;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.788);
+    text-align: right;
+    padding-right: 20px;
+    padding-left: 10px;
+  }
+  button {
+    height: 80px;
+   width:80px;
+
+    /* background-color: black; */
+    border-radius: 50px;
+    border: 1px solid #c4c4c4;
+    /* background-color: transparent; */
+    font-size: 4rem;
+    color: white;
+
+    background-image: linear-gradient(to bottom,transparent,transparent 50%,rgba(0,0,0,.04));
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.05), inset 0 1px 0 0 rgba(255,255,255,.45), inset 0 -1px 0 0 rgba(255,255,255,.15), 0 1px 0 0 rgba(255,255,255,.15);
+    text-shadow: 0 1px rgba(255,255,255,.4);
+  }
+  
+  button:hover {
+    background-color: #eaeaea;
+  }
+  button.numbers{
+    background-color: rgba(0, 0, 0, 0.116);
+    border:none;
+  }
+  
+  .operator {
+    color:white;
+    background-color: rgb(255, 162, 40);
+    font-weight: 200;
+  }
+  
+  .all-clear {
+    background-color: rgb(221, 221, 221);
+    color:black;
+    font-size: 35px;
+  }
+  .delete-function, .mod-function{
+    background-color: rgb(221, 221, 221);
+    color:black;
+    font-size: 35px;
+  }
+  
+  .all-clear:hover {
+    background-color: #f17377;
+  }
+  
+  /* .equal-sign {
+    background-color: #2e86c0;
+    border-color: #337cac;
+    color: #fff;
+    height: 100%;
+    grid-area: 2 / 4 / 6 / 5;
+  } */
+  
+  .equal-sign:hover {
+    background-color: #4e9ed4;
+  }
+  
+  .calculator-keys {
+    display: grid;
+    grid-template-columns:repeat(4, 90px) ;
+    grid-template-rows:repeat(4, 1fr) ;
+    grid-gap: 7px;
+    padding: 20px;
+    
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr);
+     */
+  } 
+  #keyNum0{
+    grid-area: 5/1/6/3;
+    width:180px;
+    text-align: left;
+    padding-left: 20px;
+}

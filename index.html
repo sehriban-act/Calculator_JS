@@ -7,42 +7,45 @@
     <script src="https://kit.fontawesome.com/eaf1f6f290.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
+   
 </head>
 <body>
     
     <main>
+        
         <div id="inputs">
-            <input type="text" class="entered_num" id="first_num">
-            <input type="text" class="entered_num" id="second_num">
+            <div type="text" class="entered_num" id="first_num" data-previous-operand ></div>
+            <div type="text" class="entered_num" id="second_num" data-current-operand></div>
         </div>
     <div id="container">
       
         
-        <div class="contain"id="keyAc">AC </div>
-        <div class="contain"id="keyMod">%</div>
-        <div class="contain"id="keyArrow"><i class="fas fa-arrow-alt-circle-left"></i></div>
-        <div class="contain"id="keyDivide"><i class="fas fa-divide"></i></div>
-        <div class="contain"id="keyNum7">7</div>
-        <div class="contain"id="keyNum8">8</div>
-        <div class="contain"id="keyNum9">9</div>
-        <div class="contain"id="keyMult"><i class="fas fa-times"></i></div>
-
-        <div class="contain"id="keyNum4">4</div>
-        <div class="contain"id="keyNum5">5</div>
-        <div class="contain"id="keyNum6">6</div>
-        <div class="contain"id="keySub"><i class="fas fa-minus"></i></div>
-       
-        <div class="contain"id="keyNum1">1</div>
-        <div class="contain"id="keyNum2">2</div>
-        <div class="contain"id="keyNum3">3</div>
-        <div class="contain"id="keySum"><i class="fas fa-plus"></i></div>
-       
-        <div class="contain"id="keyNum0">0</div>
-        <div class="contain"id="keySignComa">,</div>
-        
-        <div class="contain"id="keyEquals"><i class="fas fa-equals"></i></div>
+        <button class="contain"id="keyAc" data-all-clear>AC </button>
+        <button class="contain"id="keyMod">%</button>
+        <button class="contain"id="keyArrow" data-delete ><i class="fas fa-arrow-alt-circle-left"></i></button>
+        <button class="contain"id="keyDivide" data-operation>/</button>
+        <!-- <i class="fas fa-divide"></i> -->
+        <button value="7" class="contain"id="keyNum7"data-numbers>7</button>
+        <button value="8" class="contain"id="keyNum8"data-numbers>8</button>
+        <button value="9" class="contain"id="keyNum9"data-numbers>9</button>
+        <button value="" class="contain"id="keyMult"data-operation>*</button>     
+             <!-- <i class="fas fa-times"></i> --> 
+        <button value="4" class="contain"id="keyNum4"data-numbers>4</button>
+        <button value="5" class="contain"id="keyNum5"data-numbers>5</button>
+        <button value="6" class="contain"id="keyNum6"data-numbers>6</button>
+        <button value="" class="contain"id="keySub" data-operation>-</button>
+        <!-- <i class="fas fa-minus"></i> -->
+        <button value="1" class="contain"id="keyNum1" data-numbers>1</button>
+        <button value="2" class="contain"id="keyNum2"data-numbers>2</button>
+        <button value="3" class="contain"id="keyNum3"data-numbers>3</button>
+        <button value="" class="contain"id="keySum" data-operation>+</button>
+        <!-- <i class="fas fa-plus"></i> -->
+        <button value="0" class="contain"id="keyNum0" data-numbers>0</button>
+        <button value="" class="contain"id="keySignComa">,</button>
+        <button value="" class="contain"id="keyEquals"data-equals>=</button>
+        <!-- <i class="fas fa-equals"></i> -->
      </div>
     </main>
-    
-</body>
+    <script src="app.js"></script>
+    </body>
 </html>
