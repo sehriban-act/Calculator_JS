@@ -4,6 +4,10 @@ const calculator = {
   waitingForSecondOperand: false,
   operator: null,
 };
+// function del(){
+//   firstOperand.value=display.value.slice(0,-1);
+  
+// }
 
 function updateDisplay() {
   const display = document.querySelector('.calculator-screen');
@@ -35,7 +39,12 @@ keys.addEventListener('click', (event) => {
     // console.log('decimal', target.value);
     return;
   } 
-
+  if (target.classList.contains('delete-function')) {
+   del();
+    updateDisplay();
+    console.log('clear', target.value);
+    return;
+  }
   if (target.classList.contains('all-clear')) {
     resetCalculator();
     updateDisplay();
@@ -89,9 +98,9 @@ function handleOperator(nextOperator) {
     return;
   }
 
-  
+ 
     const showKeys=document.querySelector('.second-operand-screen');
-  showKeys.value=inputValue;
+  showKeys.value=`${firstOperand}${operator}${displayValue}`;
   
   // verify that `firstOperand` is null and that the `inputValue`
   // is not a `NaN` value
@@ -118,20 +127,29 @@ function calculate(firstOperand, secondOperand, operator) {
     return firstOperand * secondOperand;
   } else if (operator === '/') {
     return firstOperand / secondOperand;
-  }
+   }
+  // else if (operator==='%'){
+  //   return firstOperand%;
+  // }
 
   return secondOperand;
 }
-console.log(calculate());
+// console.log(calculate());
 
 
 function resetCalculator() {
+  const showKeys=document.querySelector('.second-operand-screen');
+  showKeys.value='0';
   calculator.displayValue = '0';
   calculator.firstOperand = null;
   calculator.waitingForSecondOperand = false;
   calculator.operator = null;
   console.log(calculator);
 }
+
+
+// const delBtn=document.getElementsByClassName("delete-function")[0];
+// delBtn.addEventListener('click', del);
 
 
 
